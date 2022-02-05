@@ -77,7 +77,7 @@ func GetOrder(c *fiber.Ctx) error {
 	var order models.Order
 
 	if err != nil {
-		return c.Status(400).JSON("Please ensure if is an integer")
+		return c.Status(400).JSON("Please make sure id is an integer.")
 	}
 
 	if err := FindOrder(id, &order); err != nil {
